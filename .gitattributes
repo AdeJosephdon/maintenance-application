@@ -1,0 +1,2 @@
+# Ignore line-ending warnings for node_modules
+node_modules/** -text

@@ -1,0 +1,43 @@
+{
+  "name": "maintenace-application",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon ./backend/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "prettier --check .",
+    "format": "prettier --write .",
+    "prepare": "husky install"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "mongoose": "^9.1.2",
+    "nodemon": "^3.1.11"
+  },
+  "lint-staged": {
+    "frontend/**/*.{js,jsx}": [
+      "cd frontend && npx prettier --write",
+      "cd frontend && npx eslint --fix"
+    ],
+    "backend/**/*.{js,ts}": [
+      "cd backend && npx prettier --write",
+      "cd backend && npx eslint --fix"
+    ]
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.2",
+    "eslint": "^9.39.2",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^17.0.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^16.2.7",
+    "prettier": "3.7.4"
+  }
+}
