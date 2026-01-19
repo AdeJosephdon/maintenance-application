@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon ./backend/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"No tests yet\"",
     "lint": "prettier --check .",
     "format": "prettier --write .",
     "prepare": "husky install"
@@ -32,6 +32,8 @@
     ]
   },
   "devDependencies": {
+    "@commitlint/cli": "^20.3.1",
+    "@commitlint/config-conventional": "^20.3.1",
     "@eslint/js": "^9.39.2",
     "eslint": "^9.39.2",
     "eslint-config-prettier": "^10.1.8",
